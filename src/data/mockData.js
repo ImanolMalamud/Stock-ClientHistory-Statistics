@@ -109,6 +109,8 @@ export const mockDataClients = [
   {
     id: 1,
     patente: "ABC-123",
+    nombre: "Yeye",
+    ultimoService: "12-01-2023",
     compras: [
       {
         id_compra: 1,
@@ -125,6 +127,7 @@ export const mockDataClients = [
   {
     id: 2,
     patente: "DEF-456",
+    nombre: "Toba",
     compras: [
       {
         id_compra: 3,
@@ -141,6 +144,7 @@ export const mockDataClients = [
   {
     id: 3,
     patente: "GHI-789",
+    nombre: "Quya",
     compras: [
       {
         id_compra: 5,
@@ -159,35 +163,35 @@ export const mockDataClients = [
 export const mockDataProducts = [
   {
     id: 1,
-    nombre: "Aceite para motor",
+    nombre: "aceite-motor",
     precio: 50.0,
     fecha_actualizacion: "2023-02-09",
     categoria: "Lubricante",
   },
   {
     id: 2,
-    nombre: "Filtros de aire",
+    nombre: "filtros-aire",
     precio: 20.0,
     fecha_actualizacion: "2023-02-09",
     categoria: "Filtros",
   },
   {
     id: 3,
-    nombre: "Baterías para autos",
+    nombre: "baterias-autos",
     precio: 100.0,
     fecha_actualizacion: "2023-02-09",
-    categoria: "Baterías",
+    categoria: "Baterias",
   },
   {
     id: 4,
-    nombre: "Llantas",
+    nombre: "llantas",
     precio: 150.0,
     fecha_actualizacion: "2023-02-09",
     categoria: "Llantas",
   },
   {
     id: 5,
-    nombre: "Líquido de frenos",
+    nombre: "liq-frenos",
     precio: 30.0,
     fecha_actualizacion: "2023-02-09",
     categoria: "Líquidos",
@@ -548,7 +552,7 @@ export const mockTransactions = [
 
 export const mockBarData = [
   {
-    country: "AD",
+    mes: "AD",
     "hot dog": 137,
     "hot dogColor": "hsl(229, 70%, 50%)",
     burger: 96,
@@ -559,7 +563,7 @@ export const mockBarData = [
     donutColor: "hsl(340, 70%, 50%)",
   },
   {
-    country: "AE",
+    mes: "AE",
     "hot dog": 55,
     "hot dogColor": "hsl(307, 70%, 50%)",
     burger: 28,
@@ -570,7 +574,7 @@ export const mockBarData = [
     donutColor: "hsl(275, 70%, 50%)",
   },
   {
-    country: "AF",
+    mes: "AF",
     "hot dog": 109,
     "hot dogColor": "hsl(72, 70%, 50%)",
     burger: 23,
@@ -581,7 +585,7 @@ export const mockBarData = [
     donutColor: "hsl(256, 70%, 50%)",
   },
   {
-    country: "AG",
+    mes: "AG",
     "hot dog": 133,
     "hot dogColor": "hsl(257, 70%, 50%)",
     burger: 52,
@@ -591,39 +595,39 @@ export const mockBarData = [
     donut: 83,
     donutColor: "hsl(9, 70%, 50%)",
   },
-  {
-    country: "AI",
-    "hot dog": 81,
-    "hot dogColor": "hsl(190, 70%, 50%)",
-    burger: 80,
-    burgerColor: "hsl(325, 70%, 50%)",
-    kebab: 112,
-    kebabColor: "hsl(54, 70%, 50%)",
-    donut: 35,
-    donutColor: "hsl(285, 70%, 50%)",
-  },
-  {
-    country: "AL",
-    "hot dog": 66,
-    "hot dogColor": "hsl(208, 70%, 50%)",
-    burger: 111,
-    burgerColor: "hsl(334, 70%, 50%)",
-    kebab: 167,
-    kebabColor: "hsl(182, 70%, 50%)",
-    donut: 18,
-    donutColor: "hsl(76, 70%, 50%)",
-  },
-  {
-    country: "AM",
-    "hot dog": 80,
-    "hot dogColor": "hsl(87, 70%, 50%)",
-    burger: 47,
-    burgerColor: "hsl(141, 70%, 50%)",
-    kebab: 158,
-    kebabColor: "hsl(224, 70%, 50%)",
-    donut: 49,
-    donutColor: "hsl(274, 70%, 50%)",
-  },
+  // {
+  //   country: "AI",
+  //   "hot dog": 81,
+  //   "hot dogColor": "hsl(190, 70%, 50%)",
+  //   burger: 80,
+  //   burgerColor: "hsl(325, 70%, 50%)",
+  //   kebab: 112,
+  //   kebabColor: "hsl(54, 70%, 50%)",
+  //   donut: 35,
+  //   donutColor: "hsl(285, 70%, 50%)",
+  // },
+  // {
+  //   country: "AL",
+  //   "hot dog": 66,
+  //   "hot dogColor": "hsl(208, 70%, 50%)",
+  //   burger: 111,
+  //   burgerColor: "hsl(334, 70%, 50%)",
+  //   kebab: 167,
+  //   kebabColor: "hsl(182, 70%, 50%)",
+  //   donut: 18,
+  //   donutColor: "hsl(76, 70%, 50%)",
+  // },
+  // {
+  //   country: "AM",
+  //   "hot dog": 80,
+  //   "hot dogColor": "hsl(87, 70%, 50%)",
+  //   burger: 47,
+  //   burgerColor: "hsl(141, 70%, 50%)",
+  //   kebab: 158,
+  //   kebabColor: "hsl(224, 70%, 50%)",
+  //   donut: 49,
+  //   donutColor: "hsl(274, 70%, 50%)",
+  // },
 ]
 
 export const mockPieData = [
@@ -661,164 +665,80 @@ export const mockPieData = [
 
 export const mockLineData = [
   {
-    id: "japan",
+    id: "Diciembre",
     color: tokens("dark").greenAccent[500],
     data: [
       {
-        x: "plane",
+        x: "aceite-motor",
         y: 101,
       },
       {
-        x: "helicopter",
-        y: 75,
+        x: "filtros-aire",
+        y: 100,
       },
       {
-        x: "boat",
-        y: 36,
-      },
-      {
-        x: "train",
-        y: 216,
-      },
-      {
-        x: "subway",
-        y: 35,
-      },
-      {
-        x: "bus",
-        y: 236,
-      },
-      {
-        x: "car",
-        y: 88,
-      },
-      {
-        x: "moto",
-        y: 232,
-      },
-      {
-        x: "bicycle",
-        y: 281,
-      },
-      {
-        x: "horse",
-        y: 1,
-      },
-      {
-        x: "skateboard",
-        y: 35,
-      },
-      {
-        x: "others",
-        y: 14,
-      },
-    ],
-  },
-  {
-    id: "france",
-    color: tokens("dark").blueAccent[300],
-    data: [
-      {
-        x: "plane",
-        y: 212,
-      },
-      {
-        x: "helicopter",
-        y: 190,
-      },
-      {
-        x: "boat",
+        x: "baterias-auto",
         y: 270,
       },
       {
-        x: "train",
-        y: 9,
+        x: "llantas",
+        y: 216,
       },
       {
-        x: "subway",
-        y: 75,
-      },
-      {
-        x: "bus",
-        y: 175,
-      },
-      {
-        x: "car",
-        y: 33,
-      },
-      {
-        x: "moto",
-        y: 189,
-      },
-      {
-        x: "bicycle",
-        y: 97,
-      },
-      {
-        x: "horse",
-        y: 87,
-      },
-      {
-        x: "skateboard",
-        y: 299,
-      },
-      {
-        x: "others",
-        y: 251,
+        x: "liq-frenos",
+        y: 300,
       },
     ],
   },
   {
-    id: "us",
-    color: tokens("dark").redAccent[200],
+    id: "Enero",
+    color: tokens("dark").blueAccent[300],
     data: [
       {
-        x: "plane",
-        y: 191,
+        x: "aceite-motor",
+        y: 212,
       },
       {
-        x: "helicopter",
-        y: 136,
-      },
-      {
-        x: "boat",
-        y: 91,
-      },
-      {
-        x: "train",
+        x: "filtros-aire",
         y: 190,
       },
       {
-        x: "subway",
-        y: 211,
+        x: "baterias-auto",
+        y: 270,
       },
       {
-        x: "bus",
-        y: 152,
+        x: "llantas",
+        y: 9,
       },
       {
-        x: "car",
-        y: 189,
+        x: "liq-frenos",
+        y: 180,
+      },
+    ],
+  },
+  {
+    id: "Febrero",
+    color: tokens("dark").redAccent[200],
+    data: [
+      {
+        x: "aceite-motor",
+        y: 191,
       },
       {
-        x: "moto",
-        y: 152,
+        x: "filtros-aire",
+        y: 136,
       },
       {
-        x: "bicycle",
-        y: 8,
+        x: "baterias-auto",
+        y: 91,
       },
       {
-        x: "horse",
-        y: 197,
+        x: "llantas",
+        y: 190,
       },
       {
-        x: "skateboard",
-        y: 107,
-      },
-      {
-        x: "others",
-        y: 170,
+        x: "liq-frenos",
+        y: 200,
       },
     ],
   },

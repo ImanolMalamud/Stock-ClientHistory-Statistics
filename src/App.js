@@ -17,7 +17,7 @@ import { ColorModeContext, useMode } from "./theme"
 import Calendar from "./scenes/calendar/calendar"
 import Clients from "./scenes/clients"
 import Products from "./scenes/products"
-import Purchases from "./scenes/purchases"
+import Sales from "./scenes/sales"
 
 function App() {
   const [theme, colorMode] = useMode()
@@ -38,7 +38,7 @@ function App() {
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/invoices" element={<Invoices />} />
               <Route path="/products" element={<Products />} />
-              <Route path="/purchases" element={<Purchases />} />
+              <Route path="/sales" element={<Sales />} />
               <Route path="/form" element={<Form />} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />

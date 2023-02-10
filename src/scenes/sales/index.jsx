@@ -4,7 +4,7 @@ import { tokens } from "../../theme";
 import { mockPurchases } from "../../data/mockData";
 import Header from "../../components/Header";
 
-const Purchases = () => {
+const Sales = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const columns = [
@@ -89,4 +89,4 @@ const Purchases = () => {
   );
 };
 
-export default Purchases;
+export default Sales;
